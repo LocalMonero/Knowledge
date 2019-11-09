@@ -1,0 +1,74 @@
+
+As a cryptocurrency, Monero uses a blockchain and neat cryptographic proofs to ensure that you can transact privately, and network miners to verify nobody is cheating the network. Monero uses a layer of privacy protocols, ensuring the receipient, sender, and amount are all hidden. 
+
+
+<p>
+
+<h4>To protect the receipient,</h>
+<table class="tg">
+  <tr>
+    <th class="tg-0pky">Monero is a cryptocurrency following losely to Bitcoin's model. That means coins in a wallet are actually the sum of outputs from other wallets coming into yours; and sending a transaction just forwards outputs to other wallets instead. This gives tons of room for encryption and obfuscation, in particular using something called stealth addressing, which actually allows you to forward outputs to an address on the blockchain that is seemingly unreleated to that of the actual receipient.
+    </th>
+    <th class="tg-0pky"><a href="">Click here to learn more about Stealth Addresses<a></th>
+  </tr>
+</table>
+
+<p>
+
+<h4>To protect the sender,</h>
+<table class="tg">
+  <tr>
+    <th class="tg-0pky">Since all the outputs went to stealth addresseses, transactions sent aren't actually coming from the sender's address; they're just forwarded from  the seemingly no-where on the blockchain. However, more careful analysis (and some famous attacks) can still expose sender privacy here - so Monero uses something else, called Ring Signatures.
+<p>
+    A Ring Signature is a zero-knowledge proof that pretends to sign off many outputs at the same time, with no feasible way of knowing which one was actually sent. This means that if an attacker is the one who sent you Monero, they can't tell when it was actually spent - was it you who signed off the transaction, or was it someone else using your input? Better yet, if you send a transaction to an exchange or shop, they can't tell which input you used either, since it could be any of the 11 in your total group.
+    </th>
+    <th class="tg-0pky"><a href="">Click here to learn more about Ring Signatures<a></th>
+  </tr>
+</table>
+
+<p>
+
+<h4>To hide the amount,</h>
+<table class="tg">
+  <tr>
+    <th class="tg-0pky">Hiding both the sender and recepient allow analysis based on watching transaction amounts. If a sum of outputs is moved worth 5.4987 XMR, and later 5.4987 XMR is moved again, you can be reasonably certain those transactions are correlated.
+<p>
+    Monero uses RingCT to hide the amount sent. In RingCT, amounts can't be seen, but the sum of all the inputs (previously called "forwarded outputs") can be cryptographically proven to equal the sum of all the outputs - meaning no new Monero can actually be generated in a transaction. 
+    </th>
+    <th class="tg-0pky"><a href="">Click here to learn more about RingCT<a></th>
+  </tr>
+</table>
+
+<h4>Verifying the Network</h>
+<table class="tg">
+  <tr>
+    <th class="tg-0pky">If everything in Monero is private, how can we verify no Monero has been falsely generated? How can we build essential services that rely on optional transparency?
+<p>
+
+    </th>
+    <th class="tg-0pky"><a href="">Click here to learn more Seeing balances and Verifying the Network<a></th>
+  </tr>
+</table>
+
+<p>
+
+<h4>What if we need Transparency?
+<table class="tg">
+  <tr>
+    <th class="tg-0pky">If everything in Monero is private, how can we build essential services that rely on optional transparency?
+<p>
+    Monero is optionally transparent; which means you can easily verify and publicize transactions. Transactions can be verified by anyone if the sender provides a transaction private key, and the address the funds were sent to. The transaction private key is available to the sender any time after creating the transaction, meaning it can easily be shared at any time. Furthermore, Monero offers the ability to share a private view-key to entire wallets, allowing simple auditing of a user's balance.
+    </th>
+    <th class="tg-0pky"><a href="">Click here to learn more about Auditing Wallets and Proving Sent XMR<a></th>
+  </tr>
+</table>
+
+<p>
+
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:there;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:there;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
