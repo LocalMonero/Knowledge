@@ -1,0 +1,38 @@
+<h3>Linux Full/Pruned Node Tutorial</h3>
+
+<ul>
+    <li>Step 1: Download the latest Monero software for Linux: https://web.getmonero.org/downloads/</li>
+    <li>Step 2: Extract it into the target directory</li>
+    <li>Step 3: Run <code>./monerod --rpc-bind-port 18081 --restricted-rpc</code></li>
+    <ul>
+        <li>Or, run a pruned (lightweight node): <code>./monerod --rpc-bind-port 18081 --restricted-rpc --prune-blockchain</code></li>
+    </ul>
+</ul>
+
+You are now running a full node and maintaining a copy of the ledger.<br/>
+
+<p>
+
+Test your node:
+<ul>
+    <li>Step 1: Go to <a href="https://canyouseeme.org/">canyouseeme.org/</a> and enter port 18080. If you can see yourself, great! You've configured your node correctly</li>
+</ul>
+
+If you can't see your node...
+
+<p>
+
+That means we need to port-forward on your router manually. This is unusual, but don't worry! It's not that hard either.
+
+<ul>
+    <li>Step 4: Go to your Router page: <a href=http://192.168.0.1/">http://192.168.0.1/</a></li>
+    <li>Step 5: Find your default router login/password from this website here: <a href="https://portforward.com/router-password/">https://portforward.com/router-password/</a></li>
+    <li>Step 6: Using the default username found in the previous step, and your current public WiFi password, log into your router</li>
+    <li>Step 7: Run <code>ifconfig</code> to find your local IP address. Within the output, you are looking for something like <a href="https://i.imgur.com/Fjs4vkR.png">this</a></li>
+    <ul>
+        <li> If you do not have <code>ifconfig</code> installed, see <a href="ifconfig_install.html">this page</a> for common distribution instructions.
+    </ul>
+    <li>Step 8: Port forward on port 18080. If you need help navigating your router page, see: <a href="https://portforward.com/router.htm">https://portforward.com/router.htm</a></li>
+    <li>Step 9: Confirm your router is live! Head to <a href="https://canyouseeme.org/">https://canyouseeme.org/</a> and check port 18081.</li>
+</ul>
+
