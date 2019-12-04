@@ -1,0 +1,44 @@
+<h3>Stealth Addresses</h3>
+
+<h2>At a high level</h2>
+
+At a high level, Stealth Addresses are derivations from your public address that you send Monero to. The advantage of not sending to your actual address is that no one can identify the real address by looking at the blockchain.
+
+<p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bWst278J8NA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>
+
+<h2>In more depth</h2>
+
+In cryptocurrencies, your public address is derived in the following formula:
+
+<p>
+
+<code>P = xG</code>
+
+<p>
+
+Where P is your public address, x is your private address, and G is some function that can't feasibly be reversed. However, with deposits going to your public address, everyone can see how many inputs (forwarded outputs) people have sent you, and therefore your balance.
+
+<p>
+
+In Monero, you may have noticed that addresses are much longer than other cryptocurrencies. This is because there are in fact two seperate public addresses pinned together; and in Monero, you actually have two private keys. Let's call them A and B;
+
+<p>
+
+<code>A = aG</code><br>
+<code>B = bG</code>
+
+<p>
+
+If someone wants to send you Monero (forward you outputs) now, they create their own address based off of the two of yours. They caclulate it as <code>P = H(rA)G + B</code>, where:
+
+<p>
+
+H() is a hashing function<br>
+r is a very big random number
+A is your first public address
+G is 
+
